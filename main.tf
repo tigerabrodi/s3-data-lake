@@ -1,9 +1,9 @@
 terraform {
 
   cloud {
-    organization = "tiger_projects"
+    organization = "{your-organization-name}"
     workspaces {
-      name = "s3-data-lake"
+      name = "{your-workspace-name}"
     }
   }
 
@@ -22,7 +22,7 @@ provider "aws" {
 }
 
 resource "aws_s3_bucket" "data_lake_bucket" {
-  bucket = "tiger-kun-data-lake"
+  bucket = "{your-bucket-name}"
 }
 
 resource "aws_s3_bucket_ownership_controls" "data_lake" {
